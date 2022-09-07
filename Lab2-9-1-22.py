@@ -1,4 +1,3 @@
-from math import floor
 # # name = "Blake"
 # # lastname = "Johnson"
 
@@ -39,7 +38,7 @@ dog_age_days = dog_age_months_r*31
 # print(floor(dog_age_months))
 # print(dog_age_months_r)
 print(round(dog_age_days))
-print("An age", human_age, "human should be", floor(dog_age_years), "years, and", floor(dog_age_months), "months, and", round(dog_age_days), "dyas in dog age.")
+print("An age", human_age, "human should be", round(dog_age_years), "years, and", round(dog_age_months), "months, and", round(dog_age_days), "dyas in dog age.")
 
 
 # # Create a script that asks the user for name,lastname and age. Print out the info as follows
