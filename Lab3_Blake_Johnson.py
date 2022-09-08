@@ -44,8 +44,8 @@ if Status == "m":
 		taxes = lvl1 * Income  		# Takes thier income and multiplies it with the corresponding tax percentage.
 		print("This year you owe", taxes, "in taxes")
 	elif 19901 <= Income <= 81050:  # Takes in the income and checks it against second bracket range
-		Income -= m1            # Takes out the part for the first bracket
-		p1 = m1 * lvl1          # Takes the first braket value and multiplies it to get the tax for the part of the income
+		Income -= m1           	 	# Takes out the part for the first bracket
+		p1 = m1 * lvl1          	# Takes the first braket value and multiplies it to get the tax for the part of the income
 		p2 = Income * lvl2  		# Takes the remainder and multiplies it against the second braket
 		taxes = p1 + p2				# Adds all the parts together
 		print("This year you owe", taxes, "in taxes")
@@ -64,14 +64,14 @@ elif Status == "s":
 		print("This year you owe", taxes, "in taxes")
 	elif 9951 <= Income <= 40525:  	# Takes in the income and checks it against third bracket range
 		Income -= s1            	# Takes out the part for the first bracket
-		p1 = s1 * lvl1          # Takes the first braket value and multiplies it to get the tax for the part of the income
+		p1 = s1 * lvl1          	# Takes the first braket value and multiplies it to get the tax for the part of the income
 		p2 = Income * lvl2  		# Takes the remainder and multiplies it against the second braket
 		taxes = p1 + p2				# Adds all the parts together
 		print("This year you owe", taxes, "in taxes")
 	elif 40526 <= Income <= 86375:  # Takes in the income and checks it against third bracket range
-		Income -= s1 + s2   # Takes out the part from the first 2 brackets
-		p1 = s1 * lvl1			# Takes the first bracket max value and mulitplies it to get the tax for that part of the income
-		p2 = s2 * lvl2			# Takes the second bracket max value and mulitplies it to get the tax for that part of the income
+		Income -= s1 + s2   		# Takes out the part from the first 2 brackets
+		p1 = s1 * lvl1				# Takes the first bracket max value and mulitplies it to get the tax for that part of the income
+		p2 = s2 * lvl2				# Takes the second bracket max value and mulitplies it to get the tax for that part of the income
 		p3 = Income * lvl3			# Takes the remainder and multiples it against the third bracket
 		taxes = p1 + p2 + p3  		# adds all the parts together
 		print("This year you owe", taxes, "in taxes")
