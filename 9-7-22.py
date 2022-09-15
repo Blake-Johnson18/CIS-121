@@ -1,4 +1,3 @@
-from ast import While
 from itertools import count
 from random import randint
 
