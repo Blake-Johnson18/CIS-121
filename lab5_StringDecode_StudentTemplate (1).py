@@ -17,7 +17,7 @@ def main():
 def DecodeWord():
 	# encodedWord = "WBLARF8TTS"
 	# encodedWord = "L8KAOUL"
-	# encodedWord = "E8N8N8"
+	encodedWord = "E8N8N8"
 	# encodedWord = "8TRA8DY T8LA"
 	# encodedWord = "8TT LHA TILLTA LIMAS"	
 	# encodedWord = "LHA GRAAN FIATD GTA8MS IN LHA W8RM SUNEABMS"
