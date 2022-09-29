@@ -1,0 +1,2 @@
+The mean number of apples eaten is 6.114649681528663
+The meidan number of apples eaten is 6
