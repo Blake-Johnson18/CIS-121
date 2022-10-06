@@ -1,0 +1,4 @@
+# Apples
+The Mean of apples is 6
+The Median of apples is 6
+The Mode of apples is [5]
