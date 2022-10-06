@@ -10,4 +10,3 @@ def mean(data):
 def mode(data):
     result = statistics.mode(data)
     return result
-
