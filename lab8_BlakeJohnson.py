@@ -1,16 +1,12 @@
-from audioop import findmax
-import re
-
-
 def main():
     file = 'randomValues.txt'
-    data = openFile(file)
+    numData = openFileNum(file)
     # print(data)
-    print(findMin(data,0,data[0]))
-    print(findMax(data,0,data[0]))
-    Extrema(data,False)
+    print(findMin(numData,0,numData[0]))
+    print(findMax(numData,0,numData[0]))
+    Extrema(numData,False)
 
-def openFile(fileName):
+def openFileNum(fileName):
     list = []
     with open(fileName,'r') as r:
         lines = r.read().splitlines()
@@ -50,6 +46,8 @@ def Extrema(data,Min=True,Max=True):
         print(findMax(data,0,data[0]))
     elif Min == False and Max == False:
         print("Nothing")
+
+
 
 if __name__=='__main__':
     main()
