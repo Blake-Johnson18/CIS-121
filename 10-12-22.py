@@ -1,6 +1,6 @@
 # write a function that creates two lists of random values. the user should send as a parameter how mnay elements the list should have
 
-from audioop import avg
+
 from random import randint
 from statistics import mean
 def main():
