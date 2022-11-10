@@ -1,35 +1,46 @@
 class employee:
-    def __init__(self,id_,name):
-        self.id = id_
+    def __init__(self,ID,name):
+        self.id = ID
         self.name = name
 
 class salaryEmployee(employee):
-    def __init__(self, id_, name):
-        super().__init__(id_, name)
-    def calculatePayroll(self,weeklyPay):
-        pay = weeklyPay*52
+    def __init__(self, ID, name):
+        super().__init__(ID, name)
+        self.weekly = 600
+    def calculatePayroll(self,):
+        pay = self.weekly*52
         return f'{self.name} makes ${pay} a year'
+    def printInfo(self):
+        return f"==========Employee Info==========\nName: {self.name}\nID: {self.id}\nWeekly pay: {self.weekly}\nTotal Salary this week: {self.calculatePayroll()} "
 
 class commissionEmployee(salaryEmployee):
-    def __init__(self, id_, name):
-        super().__init__(id_, name)
-    def calculatePayroll(self,wage):
-        commision = 25
-        pay = wage*commision
+    def __init__(self, ID, name):
+        super().__init__(ID, name)
+        self.weekly = 600
+        self.commision = 25
+        self.wage = 100
+    def calculatePayroll(self):
+        pay = self.wage*self.commision+self.weekly
         return f'{self.name} makes ${pay} a year'
+    def printInfo(self):
+        return f"==========Employee Info==========\nName: {self.name}\nID: {self.id}\nWeekly pay: {self.weekly}\nComission: {self.commision}\nTotal Salary this week: {self.calculatePayroll()}"
 
 class hourlyEmployee(employee):
-    def __init__(self, id_, name):
-        super().__init__(id_, name)
-    def calculatePayroll(self,hoursWorked,wage):
-        pay = (hoursWorked*wage)*52
+    def __init__(self, ID, name):
+        super().__init__(ID, name)
+        self.hours = 48
+        self.wage = 25.50
+    def calculatePayroll(self):
+        pay = (self.hours*self.wage)*52
         return f'{self.name} makes ${pay} a year'
+    def printInfo(self):
+        return f"==========Employee Info==========\nName: {self.name}\nID: {self.id}\nHours Worked: {self.hours}\nHourly wage: {self.wage}\nTotal Salary this week: {self.calculatePayroll()}"
         
 if __name__ == '__main__':
-    bob = hourlyEmployee(5648,"Bob")
-    Tony = salaryEmployee(9758,'Tony')
-    steve = commissionEmployee(3458,'Steve')
+    bobH = hourlyEmployee(5648,"Bob")
+    TonyS = salaryEmployee(9758,'Tony')
+    SteveC = commissionEmployee(3458,'Steve')
 
-    print(bob.calculatePayroll(38,24))
-    print(Tony.calculatePayroll(1657))
-    print(steve.calculatePayroll(600))
+    print(bobH.printInfo())
+    print(TonyS.printInfo())
+    print(SteveC.printInfo())
