@@ -34,6 +34,7 @@ class car:
         self.status = 'accelerating'
         self.speed = amount
         self.updatemiles(amount)
+        return self.speed
     def stop(self):
         self.status = 'stopped'
         self.speed = 0
@@ -46,10 +47,32 @@ class car:
         self.miles += miles
 
 
-def oneToSixty(car):
+def sixty(car):
     seconds = 0
     speed = car.speed
     while speed < 60:
+        speed += car.accelerate(randint(1,25))
+        seconds += 1
+
+    print('==========Car Info==========')
+    print(f"It took {seconds} seconds for you car to reach 60 mph.")
+    return f"The car drove {car.miles}"
+
+def oneHundred(car):
+    seconds = 0
+    speed = car.speed
+    while speed < 60:
+        speed += car.accelerate(randint(1,25))
+        seconds += 1
+
+    print('==========Car Info==========')
+    print(f"It took {seconds} seconds for you car to reach 60 mph.")
+    return f"The car drove {car.miles}"
+
+def twoFiftey(car):
+    seconds = 0
+    speed = car.speed
+    while speed < 250:
         speed += car.accelerate(randint(1,25))
         seconds += 1
 
@@ -62,10 +85,17 @@ def oneToSixty(car):
 
 
 toyota = company('Toyota',1996)
+ford = company('Ford',1968)
+chevy = company('Chevy',2003)
+honda = company('Honday',2000)
+nissan = company('Nissan',1998)
 
-Supra = car(4,toyota,'blue',1000,16)
+Supra = car(4,toyota,'blue',0,150)
+Focus = car(4,ford,'green',0,150)
+Malibu = car(4,chevy,'red',0,150)
 
-print(oneToSixty('Supra'))
+
+print(sixty(Supra))
 
 """
 add checks for 0-100 and 0-250
